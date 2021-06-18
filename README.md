@@ -21,7 +21,7 @@ Then, I tried training five classification models (`GaussianNB`, `LogisticRegres
 In the end, I was able to get an Area Under ROC score of **0.845** from the `RandomForestClassifier`, improved from **0.827** before the hyperparameter optimization, compared to **0.748**, obtained using the baseline model, `GaussianNB`. On the other hand, although the `XGBClassifier` performed better using default parameters, the improvement after the optimization was not significant (**0.831** to **0.835**).
 
 ## Takeaways
-In this project, it appeared that the `XGBClassifier` was not very sensitive to the hyperparameter tuning. I tried varying a couple of parameters, but they didn't result in significant change to the cross validation scores. This might be due to the inherent regularization, making it perform well even using the default parameters.
+In this project, it appeared that the `XGBClassifier` was not very sensitive to the hyperparameter tuning. I tried varying a couple of parameters, but they didn't result in a significant change to the cross validation scores. This might be due to the inherent regularization, making it perform well even using the default parameters.
 
 On the other hand, the `RandomForestClassifier` overfitted the data pretty badly using the default parameters, giving us more space to improve by tuning the hyperparameters to reduce the model complexity. In the end, this improvement made it a better classifier for this problem than the `XGBClassifier`.
 
